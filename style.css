@@ -7,6 +7,7 @@ body {
     font-family: 'Fraunces', serif;
     font-family: 'Poppins', sans-serif;
     overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -86,32 +87,22 @@ body {
     padding: 2px 20px;
     width: 20%;
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
-    
-    position: relative; /* Add this */
 }
 
 .news-sidebar h2 {
-    font-size: 24px;
-    margin: 0px;
-    /* position: sticky; Add this */
-    /* top: -21px; Stick to the top */
+    font-size: 20px;
+    margin: 0;
     background-color: #333; /* Adjust background color to match the sidebar */
-    padding: 10px 0; /* Adjust padding to match the sidebar */
+    padding: 3px 0; /* Adjust padding to match the sidebar */
     z-index: 1; /* Ensure it's on top */
-}
-
-.red-line {
-    width: 50px;
-    height: 3px;
-    background: white;
-    margin-bottom: 20px;
 }
 
 .news-container::-webkit-scrollbar {
     display: none;
 }
 .news-container{
-    max-height: 600px;
+    /* margin-top: 10px; */
+    max-height: 700px;
     overflow-y: auto;
 }
 
@@ -228,7 +219,7 @@ body {
 }
 
 #main-content{
-    max-height: 560px;
+    max-height: 700px;
     overflow-y: auto;
 }
 
