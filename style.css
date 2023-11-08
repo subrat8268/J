@@ -102,7 +102,7 @@ body {
 }
 .news-container{
     /* margin-top: 10px; */
-    max-height: 700px;
+    max-height: 900px;
     overflow-y: auto;
 }
 
@@ -219,7 +219,7 @@ body {
 }
 
 #main-content{
-    max-height: 700px;
+    max-height: 850px;
     overflow-y: auto;
 }
 
