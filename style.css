@@ -83,11 +83,10 @@ body {
     background-color: #333;
     color: #fff;
     /* Text color */
-    padding: 20px;
+    padding: 2px 20px;
     width: 20%;
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
-    max-height: 600px;
-    overflow-y: auto;
+    
     position: relative; /* Add this */
 }
 
@@ -106,6 +105,14 @@ body {
     height: 3px;
     background: white;
     margin-bottom: 20px;
+}
+
+.news-container::-webkit-scrollbar {
+    display: none;
+}
+.news-container{
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 .news-card {
