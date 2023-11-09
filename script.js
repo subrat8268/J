@@ -114,6 +114,9 @@ searchButton.addEventListener("click", function () {
     }
 });
 
+// Event listener for the search button click
+searchButton.addEventListener("click", performSearch);
+
 // Event listener for Enter key press in the search input
 searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
