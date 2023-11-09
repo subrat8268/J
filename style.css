@@ -228,11 +228,11 @@ body {
  @media (max-width: 600px) {
     #main-content {
 /*         height: 484px;  Adjust the height for small screens */
-         height: 524px;
+         height: 530px;
     }
     .news-container{
 /*         height: 485px; */
-            height: 525px;
+            height: 531px;
 
     }
 }
