@@ -225,7 +225,15 @@ body {
 }
 
  /* Media queries for different screen sizes */
- @media (max-width: 600px) {
+@media (width < 375) {
+    #main-content {
+        height: 660px; /* Adjust the height for small screens */
+    }
+    .news-container{
+        height: 683px;
+    }
+}
+ @media (375px <=  width <= 600px) {
     #main-content {
 /*         height: 484px;  Adjust the height for small screens */
          height: 536px;
