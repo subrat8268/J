@@ -114,3 +114,10 @@ searchButton.addEventListener("click", function () {
     }
 });
 
+// Event listener for Enter key press in the search input
+searchInput.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        performSearch();
+    }
+});
+
