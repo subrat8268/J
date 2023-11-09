@@ -227,10 +227,13 @@ body {
  /* Media queries for different screen sizes */
  @media (max-width: 600px) {
     #main-content {
-        height: 484px; /* Adjust the height for small screens */
+/*         height: 484px;  Adjust the height for small screens */
+         height: 524px;
     }
     .news-container{
-        height: 485px;
+/*         height: 485px; */
+            height: 525px;
+
     }
 }
 
