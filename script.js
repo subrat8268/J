@@ -75,13 +75,13 @@ document.addEventListener("visibilitychange", function () {
 const searchButton = document.getElementById("search-button");
 const searchInput = document.getElementById("search-input");
 const contentContainers = document.querySelectorAll("#main-content");
-const notFoundMessage = document.getElementById("not-found-message"); // Update this line
+const notFoundMessage = document.getElementById("not-found-message");
 
-searchButton.addEventListener("click", function () {
+// Function to perform search
+const performSearch = () => {
     const searchText = searchInput.value.toLowerCase().trim();
-    let resultFound = false; // Flag to track if a result is found
+    let resultFound = false;
 
-    // Loop through the content containers
     contentContainers.forEach(container => {
         const sectionName = container.getAttribute("data-section");
         const paragraphs = container.querySelectorAll("p");
@@ -90,10 +90,8 @@ searchButton.addEventListener("click", function () {
             const text = paragraphs[i].textContent.toLowerCase();
 
             if (text.includes(searchText)) {
-                // Scroll to the matching paragraph
                 paragraphs[i].scrollIntoView({ behavior: "smooth" });
 
-                // Highlight the matching text
                 const regex = new RegExp(searchText, "gi");
                 const highlightedText = paragraphs[i].innerHTML.replace(
                     regex,
@@ -105,14 +103,13 @@ searchButton.addEventListener("click", function () {
         }
     });
 
-    // Show "Not Found" message and set a timer to hide it after 3 seconds
     notFoundMessage.style.display = resultFound ? "none" : "block";
     if (!resultFound) {
         setTimeout(() => {
             notFoundMessage.style.display = "none";
-        }, 3000); // 3 seconds
+        }, 3000);
     }
-});
+};
 
 // Event listener for the search button click
 searchButton.addEventListener("click", performSearch);
@@ -120,7 +117,7 @@ searchButton.addEventListener("click", performSearch);
 // Event listener for Enter key press in the search input
 searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
+        event.preventDefault(); // Prevent the default form submission behavior
         performSearch();
     }
 });
-
