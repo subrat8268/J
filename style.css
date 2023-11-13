@@ -143,6 +143,7 @@ header a:first-child {
 }
 
 .main {
+    overflow-x: hidden;
     background-color: #f5f5f5;
     position: absolute;
     left: 316px;
