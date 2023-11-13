@@ -1,7 +1,4 @@
-/* Reset some default margin and padding on the body and HTML */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Poppins&display=swap');
-
-
 
 *,
 *:before,
@@ -92,7 +89,7 @@ header a:first-child {
 
 .sidebar,
 .main {
-    transition: all 0.3s ease-out;
+    /* transition: all 0.3s ease-out; */
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
     position: absolute;
@@ -282,10 +279,6 @@ h1 {
 
     .main {
         left: 216px;
-    }
-
-    .nav-items a {
-        /* padding: 9px 10px; */
     }
 
     .search-container input {
