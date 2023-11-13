@@ -159,7 +159,7 @@ header a:first-child {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* height: 40px; */
     position: sticky;
-    top: 0;
+    top: -3px;
 }
 
 .nav-items {
