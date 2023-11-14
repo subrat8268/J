@@ -2,70 +2,42 @@ const navbarLinks = document.querySelectorAll(".nav-items li a");
 const mainContent = document.querySelector(".main-section");
 const sidebarContent = document.querySelector(".sidebar");
 
+
 // Function to load content from an external file and insert it into the target element
-function loadContent(url, targetElement) {
-    fetch(url)
-        .then((response) => response.text())
-        .then((data) => {
-            targetElement.innerHTML = data;
-        })
-        .catch((error) => {
-            console.error("Error loading content:", error);
-        });
-}
+const loadContent = (url, targetElement) => fetch(url).then(response => response.text()).then(data => targetElement.innerHTML = data).catch(error => console.error("Error loading content:", error));
+
 
 // Call the function to load the sidebar content
 loadContent("./pages/sidebar.html", sidebarContent);
 
 // Add click event listeners to the navbar links
-navbarLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevent default link behavior
-        const pageURL = link.getAttribute("href");
-
-        // Remove the "active" class from all links
-        navbarLinks.forEach((item) => item.classList.remove("active"));
-
-        // Add the "active" class to the clicked link
-        link.classList.add("active");
-
-        loadContent(pageURL, mainContent);
-    });
-});
+navbarLinks.forEach(link => link.addEventListener("click", event => {
+    event.preventDefault();
+    const pageURL = link.getAttribute("href");
+    navbarLinks.forEach(item => item.classList.remove("active"));
+    link.classList.add("active");
+    loadContent(pageURL, mainContent);
+}));
 
 // Load the initial content when the page loads (e.g., "home.html")
 loadContent(navbarLinks[0].getAttribute("href"), mainContent);
 navbarLinks[0].classList.add("active");
 
-
 // WhatsApp Redirect Function
-function redirectToWhatsApp() {
-    // Define the WhatsApp number (with the country code) and the message
-    const phoneNumber = '8268017431'; // Replace with your actual WhatsApp number
-    const message = 'Hello, I have a question.';
-
-    // Create the WhatsApp URL
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-    // Open WhatsApp in a new tab or window
-    window.open(whatsappURL, '_blank');
-}
+const redirectToWhatsApp = () => window.open(`https://wa.me/8268017431?text=${encodeURIComponent("Hello, I have a question.")}`, '_blank');
 
 // Attach a click event to the WhatsApp button
 document.getElementById('whatsappButton').addEventListener('click', redirectToWhatsApp);
 
 // Function to reload the page
-function reloadPage() {
-    location.reload();
-}
+const reloadPage = () => location.reload();
 
 // Add an event listener for the visibility change
-document.addEventListener("visibilitychange", function () {
-    if (document.visibilityState === "visible") {
-        // Tab has become visible, so reload the page
-        reloadPage();
-    }
-});
+document.addEventListener("visibilitychange", () => document.visibilityState === "visible" && reloadPage());
+
+
+
+
 
 // Search functionality
 const searchButton = document.getElementById("search-button");
@@ -94,10 +66,11 @@ const performSearch = () => {
 
         for (let i = 0; i < paragraphs.length; i++) {
             const text = paragraphs[i].textContent.toLowerCase();
-
+        
             if (text.includes(searchText)) {
                 paragraphs[i].scrollIntoView({ behavior: "smooth" });
                 resultFound = true;
+                break; // Exit the loop after scrolling to the first occurrence
             }
         }
     });
@@ -120,3 +93,7 @@ searchInput.addEventListener("keypress", function (event) {
         performSearch();
     }
 });
+
+// Event listener for the search button click and Enter key press in the search input
+searchButton.addEventListener("click", performSearch);
+searchInput.addEventListener("keypress", event => event.key === "Enter" && (event.preventDefault(), performSearch()));

@@ -59,7 +59,9 @@ body {
     position: relative;
     text-decoration: none;
     font-weight: 900;
-    font-size: 1.7rem;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    line-height: 2rem;
 }
 
 .whatsapp {
@@ -254,21 +256,15 @@ h1 {
     align-items: center;
     background-color: white;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .home-content p {
-    text-align: center;
+    text-align: justify;
 }
 
 .image {
     max-width: 100%;
 }
-
-.navbar .icon {
-    display: none;
-}
-
 
 @media all and (max-width: 1024px) {
     .sidebar {
@@ -321,7 +317,8 @@ h1 {
         padding: 0.225rem 0.5rem;
     }
     .header a:first-child {
-        font-size: 0.875rem;
+        font-size: 1rem;
+        line-height: 1rem;
     }
     .whatsapp div p:first-child {
         font-size: 0.6rem;
