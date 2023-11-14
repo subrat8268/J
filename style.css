@@ -38,7 +38,7 @@ body {
     background-color: #555;
 }
 
-header {
+.header {
     color: #fff;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,7 @@ header {
     padding: 0.625rem 5.5rem;
 }
 
-header a:first-child {
+.header a:first-child {
     margin: 0;
     padding: 0 20px;
     /* line-height: 2; */
@@ -99,7 +99,7 @@ header a:first-child {
 
 .sidebar {
     width: 316px;
-    padding: 2px 20px;
+    padding: 0px 20px;
     background-color: #333;
     left: 0;
     color: white;
@@ -112,7 +112,7 @@ header a:first-child {
 
 .sidebar h2 {
     position: sticky;
-    top: -3px;
+    top: 0;
     font-size: 1.3rem;
     margin: 0;
     background-color: #333;
@@ -156,7 +156,7 @@ header a:first-child {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* height: 40px; */
     position: sticky;
-    top: -3px;
+    top: 0;
 }
 
 .nav-items {
