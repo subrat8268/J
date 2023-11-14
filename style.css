@@ -39,7 +39,6 @@ body {
 }
 
 .header {
-    font-family: "Chicago Darling Serif";
     color: #fff;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -52,9 +51,11 @@ body {
 }
 
 .header a:first-child {
+    font-family: "Chicago Darling Serif";
     margin: 0;
     padding: 0 8px;
     /* line-height: 2; */
+    color: #212529;
     position: relative;
     text-decoration: none;
     font-weight: 900;
@@ -70,21 +71,17 @@ body {
 }
 
 .whatsapp div p:first-child {
-    margin: 0px;
-    color: rgb(196, 206, 211);
-}
-
-.whatsapp div p:nth-child(2) {
     margin: -3px 0;
     color: #212529;
     font-size: 1.25rem;
     font-weight: 900;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.1rem;
 }
 
 .fa-whatsapp {
     font-size: 40px;
     padding: 10px;
+    color: #25D366;
 }
 
 
