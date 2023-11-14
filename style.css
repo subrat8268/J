@@ -39,6 +39,7 @@ body {
 }
 
 .header {
+    font-family: "Chicago Darling Serif";
     color: #fff;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -47,17 +48,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.625rem 5.5rem;
+    padding: 0.625rem 1.5rem;
 }
 
 .header a:first-child {
     margin: 0;
-    padding: 0 20px;
+    padding: 0 8px;
     /* line-height: 2; */
     position: relative;
     text-decoration: none;
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
 
 .whatsapp {
