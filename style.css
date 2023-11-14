@@ -314,10 +314,15 @@ h1 {
     }
 }
 @media all and (max-width: 480px) {
-    header{
+    .nav-items a{
+        font-size: 0.7rem;
+    }
+}
+@media all and (max-width: 480px) {
+    .header{
         padding: 0.225rem 0.5rem;
     }
-    header a:first-child {
+    .header a:first-child {
         font-size: 0.875rem;
     }
     .whatsapp div p:first-child {
